@@ -9,6 +9,6 @@
 # Description: This file should be used to construct scripts to be placed in /etc/init.d.
 ### END INIT INFO
 RESOURCE_NAME=$(pwd)/XXXXX.jar
-JAVA=/jre/bin/VVAS-DataCenter-Process
+JAVA=/jre/bin/java
 nohup $JAVA -XX:+UseG1GC -XX:+OmitStackTraceInFastThrow -Duser.timezone=GMT+8 -jar $RESOURCE_NAME -Xms2G  -Xmx4G --server.port=15050  --spring.profiles.active=pro > /dev/null &
 echo Success!
