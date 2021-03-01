@@ -10,5 +10,5 @@
 ### END INIT INFO
 RESOURCE_NAME=$(pwd)/XXXXX.jar
 JAVA=/jre/bin/java
-nohup $JAVA -XX:+UseG1GC -XX:+OmitStackTraceInFastThrow -Duser.timezone=GMT+8 -jar $RESOURCE_NAME -Xms2G  -Xmx4G --server.port=15050  --spring.profiles.active=pro > /dev/null &
+nohup $JAVA -server -XX:+UseG1GC -XX:+OmitStackTraceInFastThrow -Duser.timezone=GMT+8 -Dfile.encoding=UTF-8 -Xms128M -Xmx1G -jar $RESOURCE_NAME --server.port=8080 --spring.profiles.active=pro > /dev/null &
 echo Success!
